@@ -31,4 +31,6 @@
 a partir da `develop` e sempre que for feito um pull request para a `develop`, você verá o job
 do **SonarCloud** rodando:
 
-> No gif abaixo, podemos ver os testes rodando e qual foi o resultado desses testes:
+> No gif abaixo, podemos ver que meu pull request **passou** no teste do run-ci, mas do SonarCloud **não passou**,
+pois a cobertura de testes não foi o suficiente para atingir o mínimo que era `> 80%`:
+![executando_job_sonar.gif](help_gif_images%2Fexecutando_job_sonar.gif)
