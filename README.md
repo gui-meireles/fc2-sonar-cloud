@@ -10,18 +10,33 @@
 
 ### Primeiros passos
 
-- Subir docker local do sonarqube: `docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest`
+- O funcionamento do **SonarCloud** pegará apenas pull requests feitos na `develop`
 
-- Usuario e senha: `admin`. Mude para `admin1` ou uma senha de sua escolha.
+- Adicione o seu repositório no SonarCloud: https://sonarcloud.io/projects
 
-- Crie seu projeto no sonarqube e ele te dará um token ( Veja o nome/key do projeto nas .properties dentro das pastas Go e Js )
-- Cole esse token no seu .properties
+![adicionando_repositorio_sonar.gif](help_gif_images%2Fadicionando_repositorio_sonar.gif)
 
-- Na pasta de js, digite os comandos npm install jest @types/jest sonar-scanner --only-dev
+- Após, clique em continuar com **GitHub Actions** e adicione o token no seu repository
 
----
+![img.png](help_gif_images/img.png)
 
-### Depois de configurado
+![img_1.png](help_gif_images/img_1.png)
 
-- Abra um terminal e rode o comando sonar-scanner
-- Com isso ele testará nossa aplicação Go/Js e conseguiremos ver na interface do sonar.
+- Continuando, selecione a linguagem da sua aplicação e adicione o que o sonar pedir:
+
+![img_2.png](help_gif_images/img_2.png)
+![img.png](help_gif_images/img3.png)
+
+- Após feita essas configurações no seu **projeto** e no **SonarCloud**, podemos assim criar uma branch
+a partir da `develop` e sempre que for feito um pull request para a `develop`, você verá o job
+do **SonarCloud** rodando:
+
+> No gif abaixo, podemos ver que meu pull request **passou** no teste do run-ci, mas do SonarCloud **não passou**,
+pois a cobertura de testes não foi o suficiente para atingir o mínimo que era `> 80%`:
+![executando_job_sonar.gif](help_gif_images%2Fexecutando_job_sonar.gif)
+
+- Removendo a func **_main_** da minha aplicação, meus testes passaram com 100% de cobertura:
+- Permitindo assim, eu fazer o merge com a develop:
+
+![img.png](help_gif_images/img_4.png)
+![img.png](help_gif_images/img_5.png)
