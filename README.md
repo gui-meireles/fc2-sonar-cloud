@@ -34,3 +34,9 @@ do **SonarCloud** rodando:
 > No gif abaixo, podemos ver que meu pull request **passou** no teste do run-ci, mas do SonarCloud **não passou**,
 pois a cobertura de testes não foi o suficiente para atingir o mínimo que era `> 80%`:
 ![executando_job_sonar.gif](help_gif_images%2Fexecutando_job_sonar.gif)
+
+- Removendo a func **_main_** da minha aplicação, meus testes passaram com 100% de cobertura:
+- Permitindo assim, eu fazer o merge com a develop:
+
+![img.png](help_gif_images/img_4.png)
+![img.png](help_gif_images/img_5.png)
