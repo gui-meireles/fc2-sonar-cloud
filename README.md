@@ -25,3 +25,4 @@
 - Continuando, selecione a linguagem da sua aplicação e adicione o que o sonar recomendar:
 
 ![img_2.png](help_gif_images/img_2.png)
+![img.png](help_gif_images/img3.png)
