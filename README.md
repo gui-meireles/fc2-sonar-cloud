@@ -10,18 +10,18 @@
 
 ### Primeiros passos
 
-- Subir docker local do sonarqube: `docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest`
+- O funcionamento do SonarCloud pegará apenas pull requests feitos na develop
 
-- Usuario e senha: `admin`. Mude para `admin1` ou uma senha de sua escolha.
+- Adicione o seu repositório no SonarCloud: https://sonarcloud.io/projects
 
-- Crie seu projeto no sonarqube e ele te dará um token ( Veja o nome/key do projeto nas .properties dentro das pastas Go e Js )
-- Cole esse token no seu .properties
+![adicionando_repositorio_sonar.gif](help_gif_images%2Fadicionando_repositorio_sonar.gif)
 
-- Na pasta de js, digite os comandos npm install jest @types/jest sonar-scanner --only-dev
+- Após, clique em continuar com GitHub Actions e adicione o token no seu repository
 
----
+![img.png](help_gif_images/img.png)
 
-### Depois de configurado
+![img_1.png](help_gif_images/img_1.png)
 
-- Abra um terminal e rode o comando sonar-scanner
-- Com isso ele testará nossa aplicação Go/Js e conseguiremos ver na interface do sonar.
+- Continuando, selecione a linguagem da sua aplicação e adicione o que o sonar recomendar:
+
+![img_2.png](help_gif_images/img_2.png)
